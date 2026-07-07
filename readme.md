@@ -10,26 +10,26 @@ PayNix is a highly robust, terminal-based Point of Sale (POS) and inventory mana
 
 ---
 
-## ✨ Key Features
+## Key Features
 
-### 🔐 Security & Data Integrity
-* **Role-Based Access Control (RBAC):** Distinct administrative and employee interfaces.
-* **Brute-Force Lockout Gates:** Progressive time delays on failed login attempts.
-* **Safe Memory Management:** Custom `SafeString` implementation prevents buffer overflows and mitigates scanner-paste injection attacks.
-* **Binary File Protection:** All database files feature Magic Number validation (`PNIX`), strict schema versioning, and cryptographic checksums to prevent data tampering.
-* **Schema Desync Gate:** Graceful schema migration and automatic legacy data archiving.
-* **Graceful OS Intercepts:** Traps `SIGINT` and `SIGTERM` to safely flush buffers and lock vaults during unexpected shutdowns.
+### Security & Data Integrity
+- **Role-Based Access Control (RBAC):** Distinct admin and employee interfaces.
+- **Brute-Force Protection:** Progressive time delays on failed login attempts.
+- **Safe Memory:** Custom `SafeString` implementation prevents buffer overflows.
+- **Binary Protection:** Database files use magic number validation (`PNIX`), schema versioning, and checksums.
+- **Schema Migration:** Graceful handling of schema changes with legacy data archiving.
+- **OS Signal Traps:** Handles `SIGINT` and `SIGTERM` to flush buffers and lock vaults on shutdown.
 
-### 💰 Financial & Billing Engine
-* **Integer Cent Math:** Eliminates floating-point inaccuracies for absolute financial safety.
-* **Atomic Transactions:** "Reality Gate" validates inventory stock *before* processing to prevent race conditions or negative stock.
-* **Live "Blind Biller" Terminal:** Real-time cart editing, stock viewing, and interactive quantity management.
-* **JSON Export:** Automatically exports all finalized transactions to a secure JSON format.
-* **Z-Reports:** Automated end-of-day gross revenue and audit report generation.
+### Financial & Billing Engine
+- **Integer Math:** Uses integer cents to avoid floating-point rounding issues.
+- **Atomic Transactions:** Validates inventory before processing — prevents race conditions and negative stock.
+- **Live Terminal:** Real-time cart editing, stock viewing, quantity management.
+- **JSON Export:** Transactions exported to secure JSON format.
+- **Z-Reports:** Automated end-of-day revenue and audit reports.
 
-### 📦 Inventory Management
-* Full CRUD operations for items (Add, Update, Soft-Delete).
-* Stock validation and automated deductions.
+### Inventory Management
+- Full CRUD for items (Add, Update, Soft-Delete).
+- Stock validation and automated deductions.
 
 ## 🛠️ Prerequisites
 
@@ -44,7 +44,7 @@ PayNix uses CMake for cross-platform compilation. Follow these steps to build fr
 
 1. **Clone the repository:**
 ```bash
-   git clone [https://github.com/yourusername/projectpaynix.git](https://github.com/yourusername/projectpaynix.git)
+    git clone https://github.com/roshhellwett/projectpaynix.git
    cd projectpaynix
 ```
 
@@ -71,4 +71,4 @@ projectpaynix/
 
 ---
 
-© 2026 [Zenith Open Source Projects](https://zenithopensourceprojects.vercel.app/). All Rights Reserved. Zenith is a Open Source Project Idea's by @roshhellwett
+© 2026 [Zenith Open Source Projects](https://zenithopensourceprojects.vercel.app/). All Rights Reserved. Zenith is an Open Source Project Idea by @roshhellwett
